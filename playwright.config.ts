@@ -16,7 +16,7 @@ export default defineConfig({
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Timeout settings */
-  timeout: 60 * 1000,
+  timeout: 90 * 1000,
   expect: {
     // De az expect várakozás legyen türelmesebb!
     // Ez kezeli a lassú API válaszokat és a lassú renderelést.
