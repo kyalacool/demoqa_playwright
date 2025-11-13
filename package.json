@@ -1,0 +1,21 @@
+{
+  "name": "demoqa_playwright",
+  "version": "1.0.0",
+  "description": "DemoQA test with Playwright",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report",
+    "test.chrome": "npx playwright test --project=chromium",
+    "test.ui": "npx playwright test --ui",
+    "test.ui.chrome": "npx playwright test --ui --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0"
+  }
+}
