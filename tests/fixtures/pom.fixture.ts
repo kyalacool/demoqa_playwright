@@ -1,10 +1,11 @@
 import {test as base} from '@playwright/test'
-import {HomePage, ElementsPage, TextBoxPage} from '../pages/'
+import {HomePage, ElementsPage, TextBoxPage, CheckBoxPage} from '../pages/' 
 
 type MyFixtures = {
     homepage : HomePage
     elementspage : ElementsPage
     textboxpage : TextBoxPage
+    checkboxpage : CheckBoxPage
     }
 
 export const test = base.extend<MyFixtures>({
@@ -16,7 +17,10 @@ export const test = base.extend<MyFixtures>({
             },
         textboxpage : async ({page}, use) => {
             await use(new TextBoxPage(page))
-        }    
+            },    
+        checkboxpage : async ({page}, use) => {
+            await use(new CheckBoxPage(page))
+        }
     })
 
 export {expect} from '@playwright/test'

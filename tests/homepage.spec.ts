@@ -8,8 +8,8 @@ test.describe("Verify the Homepage", () => {
 });
 
 test("should the Homepage appear as expected", async ({ homepage }) => {
-  const step1 = await homepage.verifyPageVisibility()
-  await step1.verifyMenuNames()
+  await homepage.verifyPageVisibility()
+  await homepage.verifyMenuNames()
 });
 
 for (const menu of expectedHomePageUrls) {

@@ -16,11 +16,10 @@ export class HomePage{
         this.menuItem = page.getByRole("heading", {level:5})
         }
 
-    async verifyPageVisibility() : Promise<this>{
+    async verifyPageVisibility(){
       await expect.soft(this.page).toHaveTitle("DEMOQA");
       await expect.soft(this.page.getByRole("contentinfo")).toContainText("ALL RIGHTS RESERVED.");
       await expect.soft(this.page).toHaveURL("/")
-      return this
     }    
 
     async verifyMenuNames(){

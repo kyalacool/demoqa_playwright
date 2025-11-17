@@ -19,11 +19,10 @@ export class ElementsPage {
     this.menuItems = page.getByRole("listitem");
   }
 
-  async verifyPageVisibility() : Promise<this>{
+  async verifyPageVisibility() {
     await expect.soft(this.page).toHaveTitle("DEMOQA");
     await expect.soft(this.page.getByRole("contentinfo")).toContainText("ALL RIGHTS RESERVED.");
     await expect.soft(this.page).toHaveURL("/elements")
-    return this
   }
 
   async verifySubMenuNames(){
@@ -34,7 +33,6 @@ export class ElementsPage {
       await this.clickOnMenu(name);
       await expect(this.page).toHaveURL(url);
   }
-
 
   async clickOnMenu(name: string) {
     const button = this.page.getByText(name, { exact: true });
